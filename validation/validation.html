@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <!----font owsome---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!----google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kaushan+Script&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!----css file---->
+    <link rel="stylesheet" href="validation.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="" onsubmit="return validation()">
+                <h1>Create account...</h1>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" id="name" placeholder="Your Full Name">
+                </div>
+                <p class="error-text" id="name-msg"></p>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder=" Email@123">
+                </div>
+                <p class="error-text" id="email-msg"></p>
+
+                <div class="input-field pass-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Create new password">
+                    <i id="show" class="fa-solid fa-eye eye"></i>
+                    <i id="hide" class="fa-solid fa-eye-low-vision eye"></i>
+                </div>
+                <p class="error-text" id="pass-msg"></p>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" id="conf-pass" placeholder="Confirm password">
+                    <i id="show1" class="fa-solid fa-eye eye"></i>
+                    <i id="hide1" class="fa-solid fa-eye-low-vision eye"></i>
+                </div>
+                <p class="error-text" id="conf-msg"></p>
+                <p class="error-text" id="pass-match"></p>
+
+                <button type="submit" name="submit" value="submit" id="submit" onclick="checkedPass()">Create
+                    Account</button>
+            </form>
+        </div>
+        <div class="content">
+            <p>Password Must be contains</p>
+            <ul id="character">
+                <li>
+                    At least 8 Characters Length
+                </li>
+                <li>
+                    At least 1 Numerical Number
+                </li>
+                <li>
+                    At least 1 Capital character
+                </li>
+                <li>
+                    At least 1 Lower character
+                </li>
+                <li>
+                    At least 1 Special characters
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="validation.js"></script>
+</body>
+
+</html>
